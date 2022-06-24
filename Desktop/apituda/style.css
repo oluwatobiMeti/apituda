@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --clr-blue: #8bc6ef;
+  --clr-coral: #f1757a;
+  --clr-white: white;
+  --clr-green: #2efe00;
+} 
+body {
+  background-image: url(./images/assessment-gbc8110c38_1280.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 30%;
+  height: 100vh;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrap {
+  display: flex;
+  flex-direction: column;
+  margin-top: 45vh;
+}
+.about {
+  display: none;
+  background-color: var(--clr-green);
+  padding: .5rem .9rem;
+}
+.about * {
+  color: var(--clr-white);
+  margin: 1rem 2rem;
+}
+.wrap .dor {
+  text-transform: capitalize;
+  font-family: monospace;
+  border-right: 3px solid black;
+  font-size: 2rem;
+  width: min-content;
+  white-space: nowrap;
+  overflow: hidden;
+  color: var(--clr-green);
+  position: relative;
+  animation: type1 15s steps(19), caret 0.7s step-end
+}
+.wrap .cor {
+  text-transform: capitalize;
+  font-family: monospace;
+  border-right: 3px solid black;
+  font-size: 2rem;
+  width: min-content;
+  white-space: nowrap;
+  overflow: hidden;
+  color: var(--clr-green);
+  position: relative;
+  animation: type2 15s steps(24) 15s, caret 0.7s step-end
+}
+.wrap input {
+  width: 10rem;
+  margin: 3rem 0 0 50%;
+  border: 2px solid var(--clr-green);
+}
+.wrap input:hover,
+.wrap input:active,
+.wrap input:focus {
+  border: 2px solid var(--clr-green);
+  outline: none;
+}
+ol {
+  margin: 2rem 0;
+}
+.wrap .sor {
+  text-transform: capitalize;
+  font-family: monospace;
+  width: min-content;
+  border-right: 3px solid black;
+  font-size: 2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  color: var(--clr-green);
+  position: relative;
+  animation: type3 15s steps(37) 30s, caret 0.7s step-end
+}
+@keyframes caret {
+  0%, 100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+
+}
+@keyframes type1 {
+  0% {width: 0%;}
+  30%{width: 19ch;}
+  100%{width: 19ch; border-right: none;}
+
+}
+@keyframes type2 {
+  0% {width: 0%;}
+  30%{width: 24ch;}
+  100%{width: 24ch; border-right: none;}
+
+}
+@keyframes type3 {
+  0% {width: 0ch;}
+  30%{width: 37ch;}
+  100%{width: 37ch; border-right: none;}
+
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.checkbtn {
+  background-color: var(--clr-green);
+  color: var(--clr-white);
+  padding: .5rem 1rem;
+  width: max-content;
+  margin-top: 2rem;
+  margin-left: 50%;
+}
+.cntInput {
+  display: none;
+}
+.checkbtn {
+  display: none;
+}
+.about h3 {
+  color: var(--clr-blue);
+  font-weight: 900;
+  font-size: 2rem;
+}
+h1 {
+  color: var(--clr-blue);
+  font-size: 2.7rem;
+  font-weight: 900;
+  text-align: center;
+}
+.discribption p {
+  font-size: 2rem;
+}
+.question {
+  display: none;
+}
+.qtn-nav {
+  width: 100vw;
+  height: 3rem;
+}
+.btn-cont {
+  display: flex;
+}
+.btn-cont button {
+  color: gray;
+  border: 1px solid gray;
+}
+.btn-cont button:hover,
+.btn-cont button:active {
+  background-color: var(--clr-green);
+  color: var(--clr-white);
+  border: 1px solid var(--clr-white);
+}
+.button_list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin: 0 auto;
+}
+/* .button_list li:active,
+.button_list .under {
+  border-bottom: 2px solid var(--clr-green);
+  color: var(--clr-green);
+} */
+.button_list li {
+  padding: .7rem;
+  cursor: default;
+}
+.showBtn {
+  border-bottom: 2px solid var(--clr-green);
+  color: var(--clr-green);
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+.dsColor {
+  color: var(--clr-green);
+}
+input[type="radio"] {
+  padding: 2rem;
+  color: rgb(190, 189, 189);
+  content: "";
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  position: relative;
+  top: -0.2rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  cursor: pointer;
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px inset;
+  flex-shrink: 0;
+  background: rgb(255, 255, 255);
+  border-radius: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: silver;
+  border-image: initial;
+  transition: all 0.2s ease 0s;
+}
+input[type="radio"]:hover,
+input[type="radio"]:active {
+ background-color: rgb(3, 148, 206);
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px inset;
+}
